@@ -42,6 +42,26 @@ public class ProductController {
 	public void deleteProduct(@PathVariable("id") int id) {
 		repo.deleteById(id);
 	}
+	
+	@GetMapping("/product/search/name/{name}")
+	public Collection<Product> getByName(@PathVariable("name") String name){
+		return repo.findByName(name);
+	}
+	
+	@GetMapping("/product/name/asc")
+	public Collection<Product> getAsc(){
+		return repo.findAllByOrderByNameAsc();
+	}
+	
+@GetMapping("/product/name/desc")
+	public Collection<Product> getDesc(){
+		return repo.findAllByOrderByNameAsc();
+}
+		
+	@GetMapping("/product/available")
+	public Collection<Product> getAvailable(@RequestBody boolean available){
+			return repo.findAllByAvailable();}
+
 
 }
 
