@@ -1,0 +1,25 @@
+/*
+ * API: comunicazioni CLIENT e SERVER, API fornisce i modi di comunicazione tra i due.
+ * Si tratta dei punti di accesso condivisi per comunicare.
+ *
+ * -Devo conoscere: 
+ * -1 Il Metodo HTTP (get, post,...) e l'URL. Cosa produce e cosa consuma;
+ * -2 Cosa produce e cosa consuma.
+ * 
+ * Le APIs per l'app product saranno:
+ * 
+ * HTTP: @GET, URL: /products
+ * Produce: Collection, Consuma niente.
+ *
+ * HTTP: @GET, URL: /products/name/asc/
+ * Produce: Collection, Consuma niente.
+ *
+ * HTTP: @POST, URL: /products
+ * Produce: niente, Consuma product.
+ *
+ * HTTP: @PUT, URL: /products
+ * Produce: niente, Consuma product.
+ *
+ * HTTP: @DELETE, URL: /products/{id}
+ * Produce: niente, Consuma intS.
+ */
